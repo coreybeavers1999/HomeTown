@@ -18,6 +18,9 @@ public class GlobalController : MonoBehaviour
             return;
         }
 
+        //Set Self In Public
+        Public.Globals = this;
+
         //Make Permanent
         DontDestroyOnLoad(this);
     }
@@ -36,7 +39,7 @@ public class GlobalController : MonoBehaviour
         DebugMessage.Print("Scene Updated", DebugMessage.green);
 
         //Create Input Controller
-        Controls = Instantiate(InputControllerReference, Vector3.zero, transform.rotation);
+        Public.Controls = Instantiate(InputControllerReference, Vector3.zero, transform.rotation);
     }
 
     void DebugUpdate() {
