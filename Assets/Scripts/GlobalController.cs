@@ -7,6 +7,7 @@ public class GlobalController : MonoBehaviour
 {
     //References
     [SerializeField] InputController InputControllerReference;
+    [SerializeField] StateController StateControllerReference;
     
     //Public Variables
     [HideInInspector] public InputController Controls;
@@ -30,16 +31,17 @@ public class GlobalController : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoad;
     }
 
-    private void Update() {
+    void Update() {
         DebugUpdate();
     }
 
     void OnSceneLoad(Scene scene, LoadSceneMode mode) {
         //Debug message
-        DebugMessage.Print("Scene Updated", DebugMessage.green);
+        Console.Log("Scene Updated", Console.green);
 
         //Create Input Controller
         Public.Controls = Instantiate(InputControllerReference, Vector3.zero, transform.rotation);
+        Public.State = Instantiate(StateControllerReference, Vector3.zero, transform.rotation);
     }
 
     void DebugUpdate() {
@@ -47,4 +49,5 @@ public class GlobalController : MonoBehaviour
             SceneManager.LoadScene("Testing Scene");
         }
     }
+
 }

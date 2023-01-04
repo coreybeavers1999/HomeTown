@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6e1162fd256aa489967575ee52636a, type: 3}
+  m_Name: Sweater
+  m_EditorClassIdentifier: 
+  item_index: 3001
+  item_name: Sweater
+  value: 0
+  icon: {fileID: 2800000, guid: 459f2a8057ded384f90895f202f1a698, type: 3}
+  sprite: {fileID: 2800000, guid: 459f2a8057ded384f90895f202f1a698, type: 3}
+  is_accessory: 0
+  is_shirt: 0
+  is_pants: 0
+  is_hat: 0
+  hide_shirt: 0
+  hide_pants: 0
+  hide_hair: 0
+  hide_eyes: 0
+  max_stack_size: 0

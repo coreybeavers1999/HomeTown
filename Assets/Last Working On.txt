@@ -1,0 +1,1 @@
+I was working on the camera controller. It's totally empty but the prefab is in hierarchy
