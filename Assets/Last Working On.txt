@@ -1,1 +1,1 @@
-I was working on the camera controller. It's totally empty but the prefab is in hierarchy
+I was starting the UI. I'm starting by creating a debug menu on the side panel

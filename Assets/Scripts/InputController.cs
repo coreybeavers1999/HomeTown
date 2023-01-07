@@ -48,11 +48,16 @@ public class InputController : MonoBehaviour
     public bool right_control;
     #endregion
 
+    #region Mouse
+    public bool mouse_wheel_up;
+    public bool mouse_wheel_down;
+    #endregion
+
     void Update() {
-        Movement();
+        GetInput();
     }
 
-    void Movement() {
+    void GetInput() {
         //Held
         w = Input.GetKey(KeyCode.W);
         a = Input.GetKey(KeyCode.A);
@@ -93,5 +98,9 @@ public class InputController : MonoBehaviour
         enter_released = Input.GetKeyUp(KeyCode.Return);
         left_control_released = Input.GetKeyUp(KeyCode.LeftControl);
         right_control_released = Input.GetKeyUp(KeyCode.RightControl);
+
+        //Mouse
+        mouse_wheel_up = Input.mouseScrollDelta.y < 0f;
+        mouse_wheel_down = Input.mouseScrollDelta.y > 0f;
     }
 }

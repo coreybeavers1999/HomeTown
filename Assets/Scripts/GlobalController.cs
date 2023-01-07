@@ -8,6 +8,7 @@ public class GlobalController : MonoBehaviour
     //References
     [SerializeField] InputController InputControllerReference;
     [SerializeField] StateController StateControllerReference;
+    [SerializeField] GameObject CameraControllerReference;
     
     //Public Variables
     [HideInInspector] public InputController Controls;
@@ -42,6 +43,9 @@ public class GlobalController : MonoBehaviour
         //Create Input Controller
         Public.Controls = Instantiate(InputControllerReference, Vector3.zero, transform.rotation);
         Public.State = Instantiate(StateControllerReference, Vector3.zero, transform.rotation);
+
+        //Create Camera Controller
+        Instantiate(CameraControllerReference, Vector3.zero, transform.rotation);
     }
 
     void DebugUpdate() {

@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         //Process Inputs
         Movement();
+        CameraControls();
 
         //Debugging
         Debug();
@@ -76,6 +77,16 @@ public class PlayerController : MonoBehaviour {
         position.x += _xSpeed * Time.deltaTime;
         position.z += _zSpeed * Time.deltaTime;
         self_transform.position = position;
+    }
+
+    void CameraControls() {
+        // Return early if camera controller doesn't exit
+        if(Public.CameraControls == null) return;
+
+        // Zoom in and out
+        if(Public.Controls.mouse_wheel_up) Public.CameraControls.ZoomIn();
+        if(Public.Controls.mouse_wheel_down) Public.CameraControls.ZoomOut();
+
     }
 
     public void UpdateClothes() {
