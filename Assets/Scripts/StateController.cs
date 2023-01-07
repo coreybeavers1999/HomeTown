@@ -6,6 +6,9 @@ using System.IO;
 
 public class StateController : MonoBehaviour {
 
+    // The current state of things is stored here
+    // This includes equipped items and inventory
+
     //References
     [SerializeField] Item starting_accessory;
     [SerializeField] Item starting_shirt;
